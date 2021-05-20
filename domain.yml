@@ -1,0 +1,56 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- credit_account:
+    use_entities: true
+- my_account_number:
+    use_entities: true
+- my_nation:
+    use_entities: true
+entities:
+- account
+- account_number
+- Nation
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How may i assist you?
+  utter_acc_num:
+  - text: What's your account number?
+  utter_Nationality:
+  - text: What's your Nationality?
+  utter_balance:
+  - text: Your credit account balance is INR 100000. for more info check this [link](https://www.innovationyourself.com/)
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+  - action_save_conversation
+forms: {}
+e2e_actions: []

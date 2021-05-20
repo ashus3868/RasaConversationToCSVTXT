@@ -1,0 +1,6 @@
+models/
+chats.*
+events.db*
+index.html
+rasa.db
+

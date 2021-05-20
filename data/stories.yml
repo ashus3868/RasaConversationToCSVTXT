@@ -1,0 +1,22 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: credit_account
+    entities:
+      - account: "credit"
+  - action: utter_acc_num
+  - intent: my_account_number
+    entities:
+      - account_number: 74185296301
+  - action: utter_Nationality
+  - intent: my_nation
+    entities:
+      - Nation: "India"
+  - action: utter_balance
+  - action: action_save_conversation
+
